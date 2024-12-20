@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Miracle Photo Graphs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .model {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .model-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .close-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .close-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        .Service-Container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .Service-Card {
+            width: 300px;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .Service-Card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .Service-Card h3 {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .Service-Card p {
+            margin: 10px;
+            color: #555;
+        }
+
+        .Service-Card button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .Service-Card button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Album Section Styles */
+        .album-section {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .album-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .album-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .album-grid img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .album-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Modal for Viewing Album Images */
+        .album-modal {
+            display: none;
+            position: fixed;
+            z-index: 1050;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .album-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .close-album-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .close-album-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Miracal</a>
+            <img src="Images/miracle2.png" width="50px" height="50px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="Miracal.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="wedding-photography.html">Wedding Photography</a></li>
+                            <li><a class="dropdown-item" href="event-photography.html">Event Photography</a></li>
+                            <li><a class="dropdown-item" href="portrait-photography.html">Portrait Photography</a></li>
+                            <li><a class="dropdown-item" href="nature-photography.html">Nature Photography</a></li>
+                            <li><a class="dropdown-item" href="birthday-photography.html">Birthday Photography</a></li>
+                            <li><a class="dropdown-item" href="Corporate-Photography.html">Corporate Photography</a></li>
+                            <li><a class="dropdown-item" href="Product_Photography.html">Product Photography</a></li>
+                            <li><a class="dropdown-item" href="Fashion-Photography.html">Fashion Photography</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <form class="d-flex search-bar" role="search">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <header class="hero-section text-center">
+        <div class="overlay"></div>
+        <div class="content">
+            <img src="Images/miracle2.png" alt="Miracle Logo" class="logo">
+            <h1>MIRACLE PHOTOGRAPHY</h1>
+            <h1>Fashion Photography</h1>
+            <p>When your lens captures the bliss in every frame</p>
+            <a href="#album-section" class="btn btn-primary">Discover More</a>
+        </div>
+    </header>
+   
+    <!-- What We Offer Section -->
+    <section>
+        <div class="gallery" id="gallery">
+            <h2>Our Fashion Photography Work</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="Images/Fashion1.jpg" alt="Fashion Photo 1"> <!-- Replace with your images -->
+                </div>
+                <div class="col-md-4">
+                    <img src="Images/Fashion2.jpg" alt="Fashion Photo 2">
+                </div>
+                <div class="col-md-4">
+                    <img src="Images/Fashion3.jpg" alt="Fashion Photo 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>Why Choose Us?</h2>
+            <div class="row">
+                <div class="col-md-4 feature-item">
+                    <img src="Images/Professional Equipment.jpg" alt="Camera Icon"> <!-- Replace with your icons -->
+                    <h4>Professional Equipment</h4>
+                    <p>We use state-of-the-art cameras and lighting to ensure the highest quality images.</p>
+                </div>
+                <div class="col-md-4 feature-item">
+                    <img src="Images/Creative Vision.jpg" alt="Creativity Icon">
+                    <h4>Creative Vision</h4>
+                    <p>Our photographers bring a unique perspective to every shoot, making your photos stand out.</p>
+                </div>
+                <div class="col-md-4 feature-item">
+                    <img src="Images/Years of Experience.jpg" alt="Experience Icon">
+                    <h4>Years of Experience</h4>
+                    <p>With years of expertise, we understand what it takes to bring your fashion vision to life.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="album-section">
+        <h2>Our Albums</h2>
+        <div class="album-grid">
+            <img src="Images/Fashion Photography1.jpg" alt="Album 1" onclick="openAlbumModal(this)">
+            <img src="Images/Fashion Photography2.jpg" alt="Album 2" onclick="openAlbumModal(this)">
+            <img src="Images/Fashion Photography3.jpg" alt="Album 3" onclick="openAlbumModal(this)">
+            <img src="Images/Fashion Photography4.jpg" alt="Album 4" onclick="openAlbumModal(this)">
+            <img src="Images/Fashion Photography5.jpg" alt="Album 4" onclick="openAlbumModal(this)">
+            <img src="Images/Fashion Photography6.jpg" alt="Album 4" onclick="openAlbumModal(this)">
+        </div>
+    </section>
+
+    <!-- Album Modal -->
+    <div class="album-modal" id="albumModal">
+        <button class="close-album-btn" onclick="closeAlbumModal()">Close</button>
+        <img id="modalImage" src="" alt="Album Image">
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-section">
+                    <h3>Let's Talk</h3>
+                    <p>Feel free to reach out to us!</p>
+                    <img src="Images/miracle2.png" width="100px" height="100px">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+    
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Nature-photography.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Section 3: Help Center -->
+                <div class="footer-section">
+                    <h3>Help Center</h3>
+                    <ul>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Section 4: Newsletter -->
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required />
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 MIRACAL. All rights reserved.</p>
+                <p>MIRACAL PHOTO GRAPHS</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+

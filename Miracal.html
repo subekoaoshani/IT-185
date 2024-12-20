@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome CDN for search icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; color: #333; background-color: rosybrown;">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Images/miracle2.png" alt="Logo" width="40" height="40">
+                Miracal
+            </a>
+            <button class="hamburger" aria-label="Toggle menu">
+                ☰
+              </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="Miracal.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="wedding-photography.html">Wedding Photography</a></li>
+                            <li><a class="dropdown-item" href="event-photography.html">Event Photography</a></li>
+                            <li><a class="dropdown-item" href="portrait-photography.html">Portrait Photography</a></li>
+                            <li><a class="dropdown-item" href="nature-photography.html">Nature Photography</a></li>
+                            <li><a class="dropdown-item" href="birthday-photography.html">Birthday Photography</a></li>
+                            <li><a class="dropdown-item" href="Corporate-Photography.html">Corporate Photography</a></li>
+                            <li><a class="dropdown-item" href="Product_Photography.html">Product Photography</a></li>
+                            <li><a class="dropdown-item" href="Fashion-Photography.html">Fashion Photography</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Search Bar -->
+                <form class="d-flex search-bar" role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        
+    </nav>
+    
+    <header class="hero-section text-center">
+        <div class="overlay"></div>
+        <div class="content">
+            <img src="Images/miracle2.png" alt="Miracle Logo" class="logo">
+            <h1>MIRACAL PHOTOGRAPHY</h1>
+            <p>When your lens captures the bliss in every frame</p>
+            <a href="#services" class="btn btn-primary">Discover More</a>
+        </div>
+    </header>
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/image(3).avif" class="d-block w-100" alt="photo 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/image(2).avif" class="d-block w-100" alt="photo 2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/image(1).avif" class="d-block w-100" alt="photo 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section id="about" class="about py-5">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>
+                At Miracal Photographs, we are passionate about creating memories that last a lifetime. Our 
+                team of professionals specializes in capturing every moment, big or small, with creativity and care.
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="services py-5 bg-light">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row">
+                <!-- Wedding Photography -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="images/wedding.jpg" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Wedding Photography</h5>
+                            <p class="card-text">Capture your special day with stunning photographs that tell your love story.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portrait Photography -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="Images/photo-1706344452784-ee1d322ec4b2.avif" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Portrait Photography</h5>
+                            <p class="card-text">Perfect for families, professionals, and individuals looking for timeless portraits.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nature Photography -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="Images/nature.avif" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Nature Photography</h5>
+                            <p class="card-text">Experience the beauty of nature through our breathtaking shots.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event Photography -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="Images/event 3.webp" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Event Photography</h5>
+                            <p class="card-text">From birthdays to corporate events, we document your moments with precision.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Birthday Photography -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="images/birthday.jpg" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Birthday Photography</h5>
+                            <p class="card-text">Celebrate your special day with joyful and memorable birthday photoshoots.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Service 1: Corporate Photography -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="Images/Corporate.jpg" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Corporate Photography</h5>
+                            <p class="card-text">Professional photography for your business needs, including headshots and event coverage.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Service 2: Product Photography -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="Images/Product.jpg" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Photography</h5>
+                            <p class="card-text">Showcase your products in the best light with high-quality product photography.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Service 3: Fashion Photography -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="Images/Fashion.jpg" class="card-img-top" height="300px" width="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Fashion Photography</h5>
+                            <p class="card-text">Capture the latest trends with professional fashion shoots for magazines or portfolios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="testimonials py-5">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-item">
+                        <p>"Miracle Photographs perfectly captured the essence of our family in our portraits."</p>
+                        <h4>- John D.</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-item">
+                        <p>"Amazing attention to detail and professionalism. The nature shots were breathtaking."</p>
+                        <h4>- Sarah L.</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-item">
+                        <p>"The photos from our wedding were stunning! Highly recommend their services."</p>
+                        <h4>- Emily R.</h4>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact py-5 bg-light">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you're ready to book your session or have any questions, feel free to get in touch with us!</p>
+            <form action="#" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-section">
+                    <h3>Let's Talk</h3>
+                    <p>Feel free to reach out to us!</p>
+                    <img src="Images/miracle2.png" width="100px" height="100px">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+    
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Nature-photography.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Section 3: Help Center -->
+                <div class="footer-section">
+                    <h3>Help Center</h3>
+                    <ul>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Section 4: Newsletter -->
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required />
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 MIRACAL. All rights reserved.</p>
+                <p>MIRACAL PHOTO GRAPHS</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
